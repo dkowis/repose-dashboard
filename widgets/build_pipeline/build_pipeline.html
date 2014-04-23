@@ -1,0 +1,33 @@
+<h1 class="title" data-bind="title"></h1>
+
+<div style="position:relative;margin:auto;height:200px;">
+    <div style="position:absolute;left:0px;top:0px;">
+        <input class="meter"
+               data-angleOffset=-125
+               data-angleArc=250
+               data-width=275
+               data-height="275"
+               data-readOnly=true
+               data-thickness=".25"
+               data-bind-value="pipeline_status | shortenedNumber"
+               data-bind-data-min="outerMin"
+               data-bind-data-max="outerMax"/>
+    </div>
+    <div style="position:absolute;left:38px;top:40px">
+        <input class="meter"
+               data-angleOffset="-125"
+               data-angleArc="250"
+               data-width="200"
+               data-height="200"
+               data-thickness=".45"
+               data-readOnly="true"
+               data-bind-value="build_status | shortenedNumber"
+               data-bind-data-min="innerMin"
+               data-bind-data-max="innerMax"/>
+    </div>
+</div>
+
+
+<p class="more-info" data-bind="moreinfo"></p>
+
+<p class="updated-at" data-bind="updatedAtMessage"></p>
